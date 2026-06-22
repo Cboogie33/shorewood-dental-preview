@@ -141,6 +141,12 @@
   .quote .who{display:inline-flex;align-items:center;gap:10px;font-size:14.5px;color:var(--slate)}
   .quote .who .g{width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;color:#4285F4;font-size:12px}
   .quote .more{margin-top:30px;display:inline-flex}
+  .quote .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:780px;margin:44px auto 4px;text-align:left}
+  .quote .mini{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .quote .mini .s{color:var(--gold);font-size:13px;letter-spacing:1.5px;margin-bottom:8px}
+  .quote .mini q{font-family:var(--serif);font-style:italic;font-size:16.5px;line-height:1.42;color:var(--ink);display:block;margin-bottom:10px;quotes:none}
+  .quote .mini cite{font-style:normal;font-size:13px;color:var(--slate)}
+  @media(max-width:880px){.quote .mini-grid{grid-template-columns:1fr}}
 
   /* booking */
   .book{background:var(--teal-deep);color:#fdf8ee;position:relative;overflow:hidden}
@@ -215,18 +221,18 @@
     <div>
       <span class="eyebrow rise" style="animation-delay:.05s">Gentle Family Dentistry &middot; Shorewood, WI</span>
       <h1 class="rise" style="animation-delay:.12s">Care so gentle, you'll forget you were <span class="u">nervous</span>.</h1>
-      <p class="lede rise" style="animation-delay:.2s">If the dentist makes you anxious, you're exactly who <b>Dr. Teri Wei</b> is best with. Calm visits, sedation when you want it, honest plans, and zero lectures. Just a healthier, more confident smile.</p>
+      <p class="lede rise" style="animation-delay:.2s">If the dentist makes you anxious, you're exactly who <b>Dr. Teri Wei</b> is best with. Calm visits, sedation when you want it, and a dentist who explains every step so you always know what's coming. No lectures, no judgment, just a healthier, more confident smile.</p>
       <div class="hero-cta rise" style="animation-delay:.28s">
         <a class="btn" href="#book">Book Your First Visit</a>
         <a class="btn ghost" href="tel:4143327700">Call (414) 332-7700</a>
       </div>
       <div class="hero-proof rise" style="animation-delay:.36s">
-        <div class="award"><img src="shorewood-assets/award.png" alt="Patients' Choice Award"></div>
+        <div class="award"><div style="font-family:var(--disp,Georgia,serif);font-weight:800;font-size:40px;line-height:.85;color:var(--gold)">4.8<span style="font-size:20px;vertical-align:7px">&#9733;</span></div></div>
         <div class="divider"></div>
         <div class="rev">
           <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>Award-winning gentle care</p>
-          <span>Patients' Choice &middot; Shorewood, WI</span>
+          <p>4.8 across 297 patient reviews</p>
+          <span>Verified on Google &amp; Birdeye</span>
         </div>
       </div>
     </div>
@@ -276,7 +282,7 @@
     <div class="sec-head reveal">
       <span class="eyebrow">What We Do</span>
       <h2>Healthier teeth. A smile you <em>stop hiding.</em></h2>
-      <p>Everything your family needs in one calm office on Capitol Drive, from a quick cleaning to a full smile makeover.</p>
+      <p>Everything your family needs in one calm office on Capitol Drive, minutes from Estabrook Park, serving Shorewood, Whitefish Bay, and Milwaukee's East Side.</p>
     </div>
     <div class="grid">
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2c-2 0-3 1-5 1S4 2 3 4c-1.5 3 0 8 1.5 12C5.5 18.5 6 21 7.5 21c1.2 0 1.3-2 2-3.5.4-.9.8-1.5 2.5-1.5s2.1.6 2.5 1.5c.7 1.5.8 3.5 2 3.5 1.5 0 2-2.5 3-5C23 12 24.5 7 23 4c-1-2-2-1-4-1s-3-1-5-1z"/></svg></div><h3>Cleanings &amp; Checkups</h3><p>Stay ahead of the painful and expensive stuff with gentle routine care.</p></div>
@@ -284,7 +290,7 @@
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2 9 9l-7 .6 5.3 4.6L5.8 21 12 17l6.2 4-1.5-6.8L22 9.6 15 9z"/></svg></div><h3>Cosmetic &amp; Whitening</h3><p>Veneers and whitening for the smile you actually want in every photo.</p></div>
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-7 7c0 4 3 5 3 8h8c0-3 3-4 3-8a7 7 0 0 0-7-7zm-3 18h6v1H9z"/></svg></div><h3>Sedation Dentistry</h3><p>For the anxious and the avoidant. Get the care you need without the dread.</p></div>
       <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zM8 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3 0-6 1.5-6 4v2h8v-2c0-1 .4-1.9 1-2.6A8 8 0 0 0 8 13zm8 0a6 6 0 0 0-1.8.3c1.1.9 1.8 2 1.8 3.7v2h6v-2c0-2.5-3-4-6-4z"/></svg></div><h3>Family Dentistry</h3><p>One calm office for the whole household, with kids welcomed and at ease.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 2v6H5v2h6v6h2v-6h6V8h-6V2z"/></svg></div><h3>Same-Day Relief</h3><p>In pain right now? Call us and we'll do everything we can to see you today.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24"><path d="M11 2v6H5v2h6v6h2v-6h6V8h-6V2z"/></svg></div><h3>Same-Day Relief</h3><p>In pain? Call by 10 a.m. and we'll do everything we can to see you the same day.</p></div>
     </div>
   </div>
 </section>
@@ -298,8 +304,8 @@
     <div class="reveal">
       <span class="eyebrow">Meet Your Dentist</span>
       <blockquote><span class="lead-q">"</span>Complete oral health may be our long-term goal, but our immediate priority is patient comfort.<span class="lead-q">"</span></blockquote>
-      <div class="who">Dr. Teri Wei<span>General &amp; Cosmetic Dentistry &middot; Shorewood, WI</span></div>
-      <p class="body">Dr. Wei built Shorewood Dental around a simple idea: nobody should feel judged or rushed at the dentist. Her team is known across the neighborhood for treating dental anxiety with genuine care, and it earned them a Patients' Choice Award. New patients are always welcome.</p>
+      <div class="who">Dr. Teri Wei<span>General, Cosmetic &amp; Sleep Dentistry &middot; Shorewood, WI</span></div>
+      <p class="body">Dr. Wei built Shorewood Dental around a simple idea: nobody should feel judged or rushed at the dentist. A Diplomate of the American Board of Dental Sleep Medicine, she handles the snoring and sleep-apnea side of dental health too. Patients on Capitol Drive know her for taking the time to consult and explaining every step, so you always know what to expect. New patients are always welcome.</p>
     </div>
   </div>
 </section>
@@ -310,7 +316,11 @@
     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
     <p>"The most amazing, friendly place. They handled my dental anxiety with care and love."</p>
     <div class="who"><span class="g">G</span> Cody K. &middot; Verified Google review</div>
-    <div><a class="btn ghost more" href="https://www.google.com/search?q=Shorewood+Dental+Dr+Teri+Wei+Shorewood+WI+reviews" target="_blank" rel="noopener">Read all Google reviews &rarr;</a></div>
+    <div class="mini-grid">
+      <div class="mini"><div class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Dr. Wei takes the time to answer questions, and I'm very pleased with her pain-free dental work.</q><cite>Ellen B. &middot; Google review</cite></div>
+      <div class="mini"><div class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</div><q>Great service and great staff, always pleasant and considerate. Dr. Wei is one of the best dentists I have ever had.</q><cite>Raymond R. &middot; Google review</cite></div>
+    </div>
+    <div><a class="btn ghost more" href="https://www.google.com/search?q=Shorewood+Dental+Dr+Teri+Wei+Shorewood+WI+reviews" target="_blank" rel="noopener">Read all 297 Google reviews &rarr;</a></div>
   </div>
 </section>
 
@@ -325,6 +335,7 @@
         <div class="row"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg><div><b>2321 E. Capitol Dr, Suite 700</b><span>Shorewood, WI 53211</span></div></div>
         <div class="row"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg><div><b>(414) 332-7700</b><span>Call or text the front desk</span></div></div>
         <div class="row"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 11h-4v-2h2V7h2z"/></svg><div><b>Mon &amp; Wed 9&ndash;6 &middot; Tue 9&ndash;4</b><span>Thu &amp; Fri 9&ndash;2 &middot; Weekends closed</span></div></div>
+        <div class="row"><svg viewBox="0 0 24 24"><path d="M3 7h18v3H3zm0 5h18v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm4 3h6v2H7z"/></svg><div><b>Most major PPO plans accepted</b><span>We verify your benefits before your first visit. No insurance? Ask about our options.</span></div></div>
       </div>
       <div class="acts">
         <a class="btn light" href="tel:4143327700">Call Now</a>
@@ -368,7 +379,7 @@
   </div>
   <div class="wrap copy">
     <span>&copy; 2026 Shorewood Dental &middot; Dr. Teri Wei</span>
-    <span>Shorewood, Wisconsin</span>
+    <span>Concept preview &middot; a proposed redesign, not yet affiliated with Shorewood Dental</span>
   </div>
 </footer>
 

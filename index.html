@@ -84,6 +84,40 @@
   .hero-art .pill.two span{font-size:11.5px;opacity:.9;font-weight:500}
   @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;gap:44px;padding-top:48px}.hero-art{max-width:440px;margin:0 auto}.hero-art .frame{rotate:0deg}.hero-art .pill.one{left:0}.hero-art .pill.two{right:0}}
 
+  /* --- pop: hero atmosphere + depth --- */
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(560px 440px at 6% 8%,rgba(31,111,98,.16),transparent 60%),
+      radial-gradient(580px 480px at 98% 82%,rgba(236,106,75,.20),transparent 62%),
+      radial-gradient(720px 540px at 72% -12%,rgba(227,165,52,.12),transparent 60%)}
+  .hero .wrap{position:relative;z-index:1}
+  .hero h1 .u::after{content:"";position:absolute;left:-3%;right:-3%;bottom:.06em;height:.30em;z-index:-1;
+    background:rgba(236,106,75,.30);border-radius:7px;transform:scaleX(0);transform-origin:left;
+    animation:draw .7s .6s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes draw{to{transform:scaleX(1)}}
+  .hero-art::before{content:"";position:absolute;z-index:0;inset:20px -24px -28px 28px;border-radius:34px;
+    background:linear-gradient(150deg,var(--teal),var(--teal-deep));rotate:1.4deg;opacity:.18}
+  .hero-art::after{content:"";position:absolute;z-index:0;width:118px;height:118px;right:-26px;top:-24px;
+    background-image:radial-gradient(var(--coral) 2px,transparent 2.4px);background-size:15px 15px;opacity:.55}
+  .hero-art .frame,.hero-art .pill{z-index:2}
+  .hero-art .pill.one{animation:floatA 5.5s ease-in-out infinite}
+  .hero-art .pill.two{animation:floatB 6.5s ease-in-out infinite}
+  @keyframes floatA{0%,100%{translate:0 0}50%{translate:0 -9px}}
+  @keyframes floatB{0%,100%{translate:0 0}50%{translate:0 8px}}
+
+  /* --- pop: bold stat band --- */
+  .statband{background:var(--coral);color:#fff;position:relative;z-index:1}
+  .statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:30px 28px}
+  .statband .st{text-align:center;border-right:1px solid rgba(255,255,255,.28)}
+  .statband .st:last-child{border-right:0}
+  .statband .st b{font-family:var(--disp);font-weight:700;font-size:clamp(28px,3.4vw,38px);display:block;line-height:1}
+  .statband .st span{font-size:12.5px;color:rgba(255,255,255,.88);margin-top:7px;display:block;letter-spacing:.03em}
+  @media(max-width:880px){.statband .wrap{grid-template-columns:1fr 1fr;gap:22px 10px}.statband .st:nth-child(2){border-right:0}}
+
+  /* --- pop: service card accent --- */
+  .services .card::after{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--coral),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .26s ease}
+  .services .card:hover::after{transform:scaleX(1)}
+
   /* empathy band */
   .empathy{background:var(--teal-deep);color:#fdf8ee;position:relative;overflow:hidden;margin-top:10px}
   .empathy::before{content:"";position:absolute;top:-30%;right:-10%;width:50%;height:160%;background:radial-gradient(circle,rgba(138,169,155,.22),transparent 65%)}
@@ -176,6 +210,25 @@
   .bform .fine{font-size:12px;color:var(--slate);text-align:center;margin-top:12px}
   @media(max-width:880px){.book .wrap{grid-template-columns:1fr;gap:38px;padding:70px 28px}}
 
+  /* location + hours + map */
+  .location{padding:90px 0;background:var(--cream2);border-top:1px solid var(--line);position:relative;z-index:1}
+  .location .wrap{display:grid;grid-template-columns:1fr 1.12fr;gap:50px;align-items:center}
+  .location h2{font-family:var(--disp);font-weight:600;font-size:clamp(28px,3.4vw,42px);line-height:1.04;letter-spacing:-.025em;margin:12px 0 14px}
+  .location .addr{font-size:17px;color:var(--slate);margin-bottom:18px;line-height:1.5}
+  .location .addr b{color:var(--ink);font-weight:600}
+  .location .mapbtn{margin-bottom:30px}
+  .location .hours h5{font-family:var(--disp);font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--coral-deep);margin-bottom:10px}
+  .location .hours ul{list-style:none;display:grid;gap:0;max-width:400px}
+  .location .hours li{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  .location .hours li span{color:var(--slate)}
+  .location .hours li b{font-weight:600}
+  .location .hours li.today{color:var(--coral-deep)}
+  .location .hours li.today b{color:var(--coral-deep)}
+  .location .hours li.closed b{color:var(--slate);font-weight:500}
+  .loc-map{border-radius:24px;overflow:hidden;border:7px solid #fff;box-shadow:0 26px 60px rgba(15,46,41,.2);height:440px}
+  .loc-map iframe{width:100%;height:100%;border:0;display:block}
+  @media(max-width:880px){.location .wrap{grid-template-columns:1fr;gap:34px}.loc-map{height:320px}}
+
   footer{background:var(--ink);color:#c9d6d1;padding:54px 0 30px;position:relative;z-index:1}
   footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:34px}
   footer .brand{color:#fff}
@@ -249,6 +302,16 @@
     </div>
   </div>
 </section>
+
+<!-- STAT BAND -->
+<div class="statband">
+  <div class="wrap">
+    <div class="st"><b>4.8&#9733;</b><span>Google rating</span></div>
+    <div class="st"><b>297</b><span>Patient reviews</span></div>
+    <div class="st"><b>D.ABDSM</b><span>Dental Sleep Medicine</span></div>
+    <div class="st"><b>Award</b><span>Patients' Choice winner</span></div>
+  </div>
+</div>
 
 <!-- EMPATHY / DIFFERENCE -->
 <section class="empathy" id="difference">
@@ -354,6 +417,32 @@
       <button class="btn" type="submit">Request My Appointment</button>
       <div class="fine">No commitment. We'll confirm by phone and answer any questions.</div>
     </form>
+  </div>
+</section>
+
+<!-- LOCATION + HOURS + MAP -->
+<section class="location" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Find Us</span>
+      <h2>Right on Capitol Drive.</h2>
+      <p class="addr"><b>2321 E. Capitol Dr, Suite 700</b><br>Shorewood, WI 53211<br>Minutes from Whitefish Bay &amp; Milwaukee's East Side</p>
+      <a class="btn mapbtn" href="https://www.google.com/maps/search/?api=1&query=Shorewood+Dental+2321+E+Capitol+Dr+Suite+700+Shorewood+WI+53211" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+      <div class="hours">
+        <h5>Office Hours</h5>
+        <ul>
+          <li><span>Monday</span><b>9:00 AM &ndash; 6:00 PM</b></li>
+          <li><span>Tuesday</span><b>9:00 AM &ndash; 4:00 PM</b></li>
+          <li><span>Wednesday</span><b>9:00 AM &ndash; 6:00 PM</b></li>
+          <li><span>Thursday</span><b>9:00 AM &ndash; 2:00 PM</b></li>
+          <li><span>Friday</span><b>9:00 AM &ndash; 2:00 PM</b></li>
+          <li class="closed"><span>Saturday &amp; Sunday</span><b>Closed</b></li>
+        </ul>
+      </div>
+    </div>
+    <div class="loc-map reveal">
+      <iframe src="https://www.google.com/maps?q=2321%20E%20Capitol%20Dr%20Suite%20700%20Shorewood%20WI%2053211&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Shorewood Dental on Google Maps"></iframe>
+    </div>
   </div>
 </section>
 

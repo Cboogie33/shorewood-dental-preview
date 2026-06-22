@@ -108,6 +108,16 @@
   @keyframes floatA{0%,100%{translate:0 0}50%{translate:0 -9px}}
   @keyframes floatB{0%,100%{translate:0 0}50%{translate:0 8px}}
 
+  /* --- dress-up: gold frame border + watercolor background --- */
+  .framebar{height:5px;background:linear-gradient(90deg,#bf923a,#f1da97 22%,#e2c069 50%,#f1da97 78%,#bf923a);position:relative;z-index:40}
+  .hero-art .frame{border-color:#fff;box-shadow:0 0 0 2px #d8b25c,0 34px 70px rgba(58,43,54,.26)}
+  .hero .blob{position:absolute;z-index:0;pointer-events:none;filter:blur(48px);
+    border-radius:46% 54% 57% 43%/52% 47% 53% 48%}
+  .hero .blob.b1{width:470px;height:430px;left:-200px;top:16%;background:radial-gradient(circle at 50% 50%,rgba(196,116,177,.5),transparent 70%)}
+  .hero .blob.b2{width:540px;height:500px;right:-220px;bottom:-14%;background:radial-gradient(circle at 50% 50%,rgba(132,184,156,.46),transparent 70%)}
+  .hero .blob.b3{width:230px;height:230px;right:26%;top:-9%;background:radial-gradient(circle at 50% 50%,rgba(240,169,60,.32),transparent 70%)}
+  @media(max-width:880px){.hero .blob.b2,.hero .blob.b3{display:none}}
+
   /* --- pop: bold stat band --- */
   .statband{background:var(--coral);color:#fff;position:relative;z-index:1}
   .statband .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:30px 28px}
@@ -251,6 +261,7 @@
 </style>
 </head>
 <body>
+<div class="framebar"></div>
 
 <header>
   <div class="wrap nav">
@@ -272,10 +283,11 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
   <div class="wrap">
     <div>
       <span class="eyebrow rise" style="animation-delay:.05s">Gentle Family Dentistry &middot; Shorewood, WI</span>
-      <h1 class="rise" style="animation-delay:.12s">We love to see you <span class="u">smile</span>.</h1>
+      <h1 class="rise" style="animation-delay:.12s">We love to see you smile.</h1>
       <p class="lede rise" style="animation-delay:.2s">If the dentist makes you anxious, you're exactly who <b>Dr. Teri Wei</b> is best with. Calm visits, sedation when you want it, and a dentist who explains every step so you always know what's coming. No lectures, no judgment, just a healthier, more confident smile.</p>
       <div class="hero-cta rise" style="animation-delay:.28s">
         <a class="btn" href="#book">Book Your First Visit</a>
@@ -473,6 +485,7 @@
     <span>Concept preview &middot; a proposed redesign, not yet affiliated with Shorewood Dental</span>
   </div>
 </footer>
+<div class="framebar"></div>
 
 <script>
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});

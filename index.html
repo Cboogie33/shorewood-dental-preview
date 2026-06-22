@@ -49,6 +49,8 @@
   .brand{display:flex;align-items:center;gap:12px;font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:-.02em}
   .brand .mk{width:42px;height:42px;border-radius:50%;background:var(--teal);display:grid;place-items:center;flex:none}
   .brand .mk svg{width:23px;height:23px;fill:#fff}
+  .brand .logo-img{height:58px;width:auto;display:block;border-radius:10px}
+  .brand .logo-img.foot{height:64px;background:#fff;padding:5px 7px;border-radius:12px}
   .brand small{display:block;font-family:var(--body);font-weight:500;font-size:11px;letter-spacing:.05em;color:var(--slate);margin-top:-1px}
   .navlinks{display:flex;align-items:center;gap:30px;font-size:15px;font-weight:500;color:var(--ink)}
   .navlinks a.lnk{color:var(--slate)}
@@ -253,8 +255,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2c-2 0-3 1-5 1S4 2 3 4c-1.5 3 0 8 1.5 12C5.5 18.5 6 21 7.5 21c1.2 0 1.3-2 2-3.5.4-.9.8-1.5 2.5-1.5s2.1.6 2.5 1.5c.7 1.5.8 3.5 2 3.5 1.5 0 2-2.5 3-5C23 12 24.5 7 23 4c-1-2-2-1-4-1s-3-1-5-1z"/></svg></span>
-      <span>Shorewood Dental<small>Dr. Teri Wei</small></span>
+      <img class="logo-img" src="shorewood-assets/logo.jpg" alt="Shorewood Dental">
     </a>
     <nav class="navlinks">
       <span class="grp" style="display:flex;gap:30px">
@@ -274,7 +275,7 @@
   <div class="wrap">
     <div>
       <span class="eyebrow rise" style="animation-delay:.05s">Gentle Family Dentistry &middot; Shorewood, WI</span>
-      <h1 class="rise" style="animation-delay:.12s">Care so gentle, you'll forget you were <span class="u">nervous</span>.</h1>
+      <h1 class="rise" style="animation-delay:.12s">We love to see you <span class="u">smile</span>.</h1>
       <p class="lede rise" style="animation-delay:.2s">If the dentist makes you anxious, you're exactly who <b>Dr. Teri Wei</b> is best with. Calm visits, sedation when you want it, and a dentist who explains every step so you always know what's coming. No lectures, no judgment, just a healthier, more confident smile.</p>
       <div class="hero-cta rise" style="animation-delay:.28s">
         <a class="btn" href="#book">Book Your First Visit</a>
@@ -450,7 +451,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <a class="brand" href="#top"><span class="mk"><svg viewBox="0 0 24 24"><path d="M12 2c-2 0-3 1-5 1S4 2 3 4c-1.5 3 0 8 1.5 12C5.5 18.5 6 21 7.5 21c1.2 0 1.3-2 2-3.5.4-.9.8-1.5 2.5-1.5s2.1.6 2.5 1.5c.7 1.5.8 3.5 2 3.5 1.5 0 2-2.5 3-5C23 12 24.5 7 23 4c-1-2-2-1-4-1s-3-1-5-1z"/></svg></span><span>Shorewood Dental<small>Dr. Teri Wei</small></span></a>
+      <a class="brand" href="#top"><img class="logo-img foot" src="shorewood-assets/logo.jpg" alt="Shorewood Dental"></a>
       <p>Gentle, judgment-free family dentistry in the heart of Shorewood, Wisconsin. Nervous patients are our specialty.</p>
     </div>
     <div>
